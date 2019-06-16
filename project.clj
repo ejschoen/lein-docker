@@ -15,9 +15,11 @@
 
   :vcs :git
   :scm {:name "git"
-        :url  "https://github.com/gorillalabs/lein-docker.git"}
+        :url  "https://github.com/ejschoen/lein-docker.git"}
 
-  :deploy-repositories [["releases" :clojars]]
+  :deploy-repositories [#_["releases" :clojars]
+                        ["releases" {:url "https://dev.i2kconnect.com/artifactory/libs-release-local"}
+                         "snapshots" {:url "https://dev.i2kconnect.com/artifactory/libs-snapshot-local"}]]
   :release-tasks [["vcs" "assert-committed"]
                   ["v" "update"]
                   ["deploy"]
