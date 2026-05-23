@@ -19,8 +19,8 @@
         :url  "https://github.com/ejschoen/lein-docker.git"}
 
   :deploy-repositories [#_["releases" :clojars]
-                        ["releases" {:url "https://dev.i2kconnect.com/artifactory/libs-release-local"}
-                         "snapshots" {:url "https://dev.i2kconnect.com/artifactory/libs-snapshot-local"}]]
+                        ["releases" {:url "https://btc-artifactory.i2kconnect.com/artifactory/libs-release-local"}
+                         "snapshots" {:url "https://btc-artifactory.i2kconnect.com/artifactory/libs-snapshot-local"}]]
   :release-tasks [["vcs" "assert-committed"]
                   ["v" "update"]
                   ["deploy"]
